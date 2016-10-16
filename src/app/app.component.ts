@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ArticleComponent } from './article/article.component';
+import { HeaderComponent } from './shared/';
+import { Article } from './article/article';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  constructor() {
+  }
+
 }

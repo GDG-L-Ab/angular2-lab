@@ -1,0 +1,21 @@
+<div class="col-sm-6 col-md-4">
+  <a class="ui large header" href="{{ article.link }}">
+    <span class="badge">{{article.votes}}</span> {{ article.title }} 
+  </a>
+  <div class="meta">({{ article.domain() }})</div>
+  <ul class="ui big horizontal list voters">
+    
+      <button type="button" class="btn btn-default" 
+        (click)="voteUp()"
+        aria-label="Left Align">
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="btn btn-default" 
+        (click)="voteDown()"
+        aria-label="Left Align">
+        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+      </button>
+      
+    
+  </ul>
+</div>

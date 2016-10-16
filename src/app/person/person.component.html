@@ -1,0 +1,29 @@
+<div class="container container-center">
+  <div class="row">
+    <div *ngFor="let person of people; let i = index;" class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img class="img-responsive img-circle" src="{{person.avatar}}">
+        <div class="caption">
+          <h3>{{i}}{{person.name}} <span class="badge">{{person.votes}}</span></h3>
+          <p class="pull-right">
+            <button type="button" class="btn btn-default" 
+              (click)="voteUp(i)"
+              aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default" 
+              (click)="voteDown(i)"
+              aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            </button>
+            
+          </p>
+          <p></p>
+          <p>
+            <a href="{{person.link}}" class="btn btn-primary" role="button">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
